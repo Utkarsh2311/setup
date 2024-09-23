@@ -46,10 +46,10 @@ print_os(){
     cowsay -f dragon "SIT BACK AND RELAX NOW, SCRIPT WILL DO ALL THE WORK"
 }
 
-source install_zsh.sh
-source install_neovim.sh
-source install_tmux.sh
-source install_kitty.sh
+source configs/install_zsh.sh
+source configs/install_neovim.sh
+source configs/install_tmux.sh
+source configs/install_kitty.sh
 
 run(){
     if [ $# -eq 0 ]; then
