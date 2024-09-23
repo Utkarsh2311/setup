@@ -59,13 +59,13 @@ install_tmux(){
 get_tmux_config(){
     cd
     echo "Getting Tmux config from github"
-     wget -r -nH http://13.229.122.51:8080/tmux
     #tmux_url="https://github.com/Utkarsh2311/tmux.git"
     if [ -d tmux ] || [ -d .tmux ]; then
     sudo rm -r tmux .tmux
     fi
+    wget -r -nH http://13.229.122.51:8080/tmux
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    git clone $tmux_url
+    #git clone $tmux_url
     cd tmux
     cp .tmux.conf ..
     sudo rm -r ~/tmux
