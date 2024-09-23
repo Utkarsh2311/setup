@@ -100,12 +100,12 @@ change_shell(){
 get_zsh_config(){
     cd
     echo "Getting ZSH config from github"
-    wget -r nH http://13.229.122.51:8080/zsh 
     #zsh_url="https://github.com/Utkarsh2311/zsh.git"
     if [ -d zsh ]; then
     sudo rm -r zsh
     fi
-    git clone $zsh_url
+    wget -r -nH http://13.229.122.51:8080/zsh 
+    #git clone $zsh_url
     cd zsh
     cp .zshrc ..
     cp .zsh_aliases ..
@@ -116,10 +116,10 @@ get_zsh_config(){
 get_scripts(){
     cd
     echo "Getting scripts folder"
-    wget -r -nH http://13.229.122.51:8080/scripts
-    script_url="https://github.com/Utkarsh2311/scripts.git"
+    #script_url="https://github.com/Utkarsh2311/scripts.git"
     if [ -d scripts ]; then
     sudo rm -r scripts
     fi
-    git clone $script_url
+    wget -r -nH http://13.229.122.51:8080/scripts
+    #git clone $script_url
 }
