@@ -12,7 +12,7 @@ install_neovim(){
             brew install neovim
             git clone https://github.com/Utkarsh2311/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
             ;;
-        "ubuntu-linux-gnu"|"debian-linux-gnu")
+        "ubuntu-linux-gnu"|"debian-linux-gnu"|"ubuntu debian-linux-gnu")
             echo "Installing neovim on Ubuntu/Debian..."
             git clone https://github.com/Utkarsh2311/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
             ;;

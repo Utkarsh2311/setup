@@ -14,7 +14,7 @@ install_tmux(){
                 brew install tmux
                 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
                 ;;
-            "ubuntu-linux-gnu"|"debian-linux-gnu")
+            "ubuntu-linux-gnu"|"debian-linux-gnu"| "ubuntu debian-linux-gnu")
                 echo "Installing tmux on Ubuntu/Debian..."
                 sudo apt install -y tmux
                 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier

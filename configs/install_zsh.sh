@@ -40,31 +40,37 @@ install_zsh() {
             check_homebrew_installed
             brew install zsh
             brew install fzf
-            brew install zoxide
+            curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
             ;;
-        "ubuntu-linux-gnu"|"debian-linux-gnu")
+        "ubuntu-linux-gnu"|"debian-linux-gnu"| "ubuntu debian-linux-gnu")
             echo "Installing zsh on Ubuntu/Debian..."
-            sudo apt update && sudo apt install -y zsh zoxide fzf
+            sudo apt update && sudo apt install -y zsh fzf
+            curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
             ;;
         "kali-linux-gnu")
             echo "Installing zsh on Kali Linux..."
-            sudo apt update && sudo apt install -y zsh zoxide fzf
+            sudo apt update && sudo apt install -y zsh fzf
+            curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
             ;;
         "fedora-linux-gnu")
             echo "Installing zsh on Fedora..."
-            sudo dnf install -y zsh zoxide fzf
+            sudo dnf install -y zsh fzf
+            curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
             ;;
         "centos-linux-gnu"|"rhel-linux-gnu")
             echo "Installing zsh on CentOS/RHEL..."
-            sudo yum install -y zsh zoxide fzf
+            sudo yum install -y zsh fzf
+            curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
             ;;
         "arch-linux-gnu"|"manjaro-linux-gnu")
             echo "Installing zsh on Arch/Manjaro..."
-            yay -Sy --noconfirm zsh-completions zsh zoxide fzf
+            yay -Sy --noconfirm zsh-completions zsh fzf
+            curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
             ;;
         "suse-linux-gnu"|"opensuse-linux-gnu")
             echo "Installing zsh on openSUSE/SUSE..."
-            sudo zypper install -y zsh zoxide fzf
+            sudo zypper install -y zsh fzf
+            curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
             ;;
         *)
             echo "Operating system not supported by this script. Detected: $ID_OSTYPE"

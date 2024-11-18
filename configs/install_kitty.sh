@@ -10,7 +10,7 @@ install_kitty(){
             echo "Installing kitty on macOS..."
             brew install --cask kitty
             ;;
-        "ubuntu-linux-gnu"|"debian-linux-gnu")
+        "ubuntu-linux-gnu"|"debian-linux-gnu"|"ubuntu debian-linux-gnu")
             echo "Installing kitty on Ubuntu/Debian..."
             sudo apt install -y kitty
             ;;
