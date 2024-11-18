@@ -14,7 +14,12 @@ install_neovim(){
             ;;
         "ubuntu-linux-gnu"|"debian-linux-gnu"|"ubuntu debian-linux-gnu")
             echo "Installing neovim on Ubuntu/Debian..."
+            curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+            mv nvim-linux64.tar.gz nvim.tar.gz
+            sudo rm -rf /opt/nvim
+            sudo tar -C /opt -xzf nvim.tar.gz
             git clone https://github.com/Utkarsh2311/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+            rm -r nvim.tar.gz
             ;;
         "fedora-linux-gnu")
             echo "Installing neovim on Fedora..."
